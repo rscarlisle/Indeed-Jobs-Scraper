@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html id='paysa'>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e80d443e91","applicationID":"54185250","transactionName":"ewoLQ0JfCA4AQh1QWFYKC15TUQhND19QQBZRCwFSSA==","queueTime":0,"applicationTime":137,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>
+ Javascript Jobs | 
+
+Paysa
+
+</title>
+<meta content='DMK6-vwXTuA6ImcHO3A0Yc3FZgjoKH3FvakeXREZWCg' name='google-site-verification'>
+<meta content='4330759DC3576E7ABBC3FD1F37EFA2F2' name='msvalidate.01'>
+<meta content='7459e81c9d4addcbb33f' name='wot-verification'>
+
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<meta content='english' name='language'>
+<meta content='#313243' name='theme-color'>
+<meta content='#313243' name='msapplication-navbutton-color'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<script>
+  bacon = []
+</script>
+<style>
+  .hide-on-start {
+    visibility: hidden;
+  }
+</style>
+<link href='//d2n9vrt7vtdwjk.cloudfront.net/assets/icons/apple-touch-icon-fd9feb6e3b6169e8fdaee35f8e6403f3.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='//d2n9vrt7vtdwjk.cloudfront.net/assets/icons/apple-touch-icon-76x76-fd9feb6e3b6169e8fdaee35f8e6403f3.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='//d2n9vrt7vtdwjk.cloudfront.net/assets/icons/apple-touch-icon-120x120-30df068224a82388fbfb33840aeb6326.png' rel='apple-touch-icon' sizes='120x120'>
+<link href='//d2n9vrt7vtdwjk.cloudfront.net/assets/icons/apple-touch-icon-152x152-5e0e4526e4910f9dd2d462f4e59d55e6.png' rel='apple-touch-icon' sizes='152x152'>
+<link href='//d2n9vrt7vtdwjk.cloudfront.net/assets/icons/apple-touch-icon-180x180-a1ed2a8b4b1a565e9ea0f35ba5ed1691.png' rel='apple-touch-icon' sizes='180x180'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-63955836-1', 'auto');
+  
+  ga('require', 'cleanUrlTracker');
+  ga('require', 'outboundLinkTracker', {
+    linkSelector: '.js-track-clicks'
+  });
+  ga('require', 'urlChangeTracker');
+</script>
+
+<meta content=' Javascript Jobs | Paysa' property='og:title'>
+<meta content='Paysa' property='og:site_name'>
+<meta content='https://www.paysa.com/jobs/javascript--s' property='og:url'>
+<meta content='View 21.9K javascript jobs with salaries ranging from $72.1K to $219K. See which javascript jobs you match and can help make more money and advance your career' property='og:description'>
+<meta content='https://d2n9vrt7vtdwjk.cloudfront.net/assets/opengraph/jobs_data-min-969e5344a8557ad82444055ff88dfd03.png' property='og:image'>
+<meta content='en_US' property='og:locale'>
+<meta content='604236749717470' property='fb:app_id'>
+
+
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','//connect.facebook.net/en_US/fbevents.js');
+  
+  fbq('init', '782143291906426');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+<img alt='facebook pixel' height='1' src='https://www.facebook.com/tr?id=782143291906426&amp;ev=PageView&amp;noscript=1' style='display:none' width='1'>
+</noscript>
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="p+zkJMtfJKZhBG/dRXk67VxZLQEG6MEdck+Infl65LHN/p9G5Vvgm4vAgtdWkzdvh8Fvt3FNmRBq6V2tXyyd2g==" />
+<script>
+  // GA - st custom dimensions
+  ga("set", "dimension1", "Signed In");
+  ga("set", "dimension2", "Site");
+</script>
+
+
+<meta content='View 21.9K javascript jobs with salaries ranging from $72.1K to $219K. See which javascript jobs you match and can help make more money and advance your career' name='description'>
+<link href='https://www.paysa.com/jobs/javascript--s' rel='canonical'>
+
+<script type="text/javascript" src="/ga420167.js" defer></script><style type="text/css">#d__fFH{position:absolute;top:-5000px;left:-5000px}#d__fF{font-family:serif;font-size:200px;visibility:hidden}#vrucbybsfyurrtysdssfyztwccc{display:none!important}</style></head>
+<body class='app paysa-v1-product' data-action='index' data-controller='canonical/jobs' data-env='aws_production' itemscope='' itemtype='http://schema.org/WebPage'>
+<div class='hide-on-start' id='body-wrapper'>
+<script>
+  var currentUser = {"image":"https://lh3.googleusercontent.com/-dQjHgucjrkQ/AAAAAAAAAAI/AAAAAAAAAmc/CT_6G3lac-k/s50-c/photo.jpg","full_name":"Randall Carlisle","updated_at":"2017-08-09T11:28:20.000-07:00","email_confirmed":true,"password_protected":false};
+</script>
+
+<div class='p-nav-and-bar'>
+<div id='p-nav'>
+<ul itemscope itemtype='http://schema.org/BreadcrumbList'>
+<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<div itemprop='name'>
+Top Jobs
+</div>
+<meta content='1' itemprop='position'>
+</li>
+</ul>
+<div class='wrap'>
+<ul class='site-nav-menu'>
+<li itemprop='url'>
+<a title="Sign Up" itemprop="name" href="/users/sign_up">Sign Up
+</a></li>
+<li itemprop='url'>
+<a title="Sign In" itemprop="name" href="/users/sign_in">Sign In
+</a></li>
+</ul>
+</div>
+</div>
+<div class='nav-bars'>
+<nav class='navbar navbar-black react-nav'>
+<div class='container-fluid'>
+<div class='navbar-header'>
+<div class='nav-header-icon' id='nav-button'>
+<i class='zmdi zmdi-menu nav-icon'></i>
+</div>
+<div class='navbar-brand-container'></div>
+</div>
+</div>
+</nav>
+</div>
+</div>
+
+<div class='page-and-footer'>
+<div class='page-wrap' itemprop='mainContentOfPage'>
+<div class='paysa-product'>
+<div id='jobs-search'>
+<div class='job-search-root' data-description='View 21.9K javascript jobs with salaries ranging from $72.1K to $219K. See which javascript jobs you match and can help make more money and advance your career' data-main-title='false' data-query='{"title":null,"location":null,"company":null,"skills":["javascript"],"min_total":null,"min_base":null,"min_bonus":null,"min_signon":null,"min_equity":null}' data-title='Job Search Personalized to You'>
+<div class='job-search-description'>View 21.9K javascript jobs with salaries ranging from $72.1K to $219K. See which javascript jobs you match and can help make more money and advance your career</div>
+<p id='pre-render-summary'>
+<ul>
+<li>
+<strong>employee:</strong>
+&nbsp;
+<span class='numeric'>3</span> positions are open at large companies (<span class='numeric'>101-1,000</span> employees), while <span class='numeric'>8</span> positions are open at very large companies (<span class='numeric'>1,001-10,000</span> employees).
+</li>
+<li>
+<strong>degree:</strong>
+&nbsp;
+<span class='numeric'>11</span> positions require a Bs degree, while <span class='numeric'>1</span> position requires a Ph D degree.
+</li>
+<li>
+<strong>skills:</strong>
+&nbsp;
+<span class='numeric'>125</span> positions demand these types of skills: <a href='/jobs/javascript--s'>Java Script</a>, <a href='/jobs/software--s'>Software</a>, <a href='/jobs/integration--s'>Integration</a>, <a href='/jobs/software-development--s'>Software Development</a>, <a href='/jobs/scrum--s'>Scrum</a>, <a href='/jobs/computer-science--s'>Computer Science</a>, <a href='/jobs/html--s'>Html</a>, <a href='/jobs/technology--s'>Technology</a>, <a href='/jobs/java--s'>Java</a>, <a href='/jobs/php--s'>Php</a>, <a href='/jobs/sql--s'>Sql</a>, <a href='/jobs/automation--s'>Automation</a>, <a href='/jobs/management--s'>Management</a>, <a href='/jobs/testing--s'>Testing</a>, <a href='/jobs/web-services--s'>Web Services</a>, <a href='/jobs/agile--s'>Agile</a>, <a href='/jobs/analysis--s'>Analysis</a>, <a href='/jobs/sql-server--s'>Sql Server</a>, <a href='/jobs/user-experience--s'>User Experience</a>, <a href='/jobs/linux--s'>Linux</a>, <a href='/jobs/api--s'>Api</a>, <a href='/jobs/test-automation--s'>Test Automation</a>, <a href='/jobs/html5--s'>Html5</a>, <a href='/jobs/leadership--s'>Leadership</a>, <a href='/jobs/security--s'>Security</a>, <a href='/jobs/web-applications--s'>Web Applications</a>, <a href='/jobs/docker--s'>Docker</a>, <a href='/jobs/sass--s'>Sass</a>, <a href='/jobs/information-systems--s'>Information Systems</a>, and <a href='/jobs/architectures--s'>Architectures</a>.
+</li>
+<li>
+<strong>years:</strong>
+&nbsp;
+<span class='numeric'>5</span> positions need more junior candidates (<span class='numeric'>0-2</span> years of experience), while <span class='numeric'>1</span> position needs senior candidates (<span class='numeric'>10+-20</span> years).
+</li>
+<li>
+<strong>funding:</strong>
+&nbsp;
+Publicly held companies want to fill <span class='numeric'>5</span> positions.
+</li>
+</ul>
+</p>
+<div class='meta-list-container'>
+<h2 class='h4 no-margin-top no-margin-bottom text-left'>Job for  Staff Software Engineer at Mountain View, CA</h2>
+</div>
+<div class='meta-list' itemscope itemtype='http://schema.org/ItemList'>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='1' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Posted 4 days ago.</div>
+</div>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='2' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Base salaries estimate range from  to , averaging $180,138.</div>
+</div>
+</div>
+
+<div class='meta-list-container'>
+<h2 class='h4 no-margin-top no-margin-bottom text-left'>Job for  Senior Project Manager at Redwood City, CA</h2>
+</div>
+<div class='meta-list' itemscope itemtype='http://schema.org/ItemList'>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='1' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Posted 4 days ago.</div>
+</div>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='2' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Base salaries estimate range from  to , averaging $146,397.</div>
+</div>
+</div>
+
+<div class='meta-list-container'>
+<h2 class='h4 no-margin-top no-margin-bottom text-left'>Job for  Technical Lead at Dover, NH</h2>
+</div>
+<div class='meta-list' itemscope itemtype='http://schema.org/ItemList'>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='1' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Posted 3 days ago.</div>
+</div>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='2' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Base salaries estimate range from  to , averaging $112,214.</div>
+</div>
+</div>
+
+<div class='meta-list-container'>
+<h2 class='h4 no-margin-top no-margin-bottom text-left'>Job for  Data Science Manager at New York, NY</h2>
+</div>
+<div class='meta-list' itemscope itemtype='http://schema.org/ItemList'>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='1' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Posted 3 days ago.</div>
+</div>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='2' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Base salaries estimate range from  to , averaging $115,961.</div>
+</div>
+</div>
+
+<div class='meta-list-container'>
+<h2 class='h4 no-margin-top no-margin-bottom text-left'>Job for  Full Stack Developer Manager at Santa Cruz, CA</h2>
+</div>
+<div class='meta-list' itemscope itemtype='http://schema.org/ItemList'>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='1' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Posted 7 days ago.</div>
+</div>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='2' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Base salaries estimate range from  to , averaging $114,995.</div>
+</div>
+</div>
+
+<div class='meta-list-container'>
+<h2 class='h4 no-margin-top no-margin-bottom text-left'>Job for  Senior QA Analyst at Charlotte, NC</h2>
+</div>
+<div class='meta-list' itemscope itemtype='http://schema.org/ItemList'>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='1' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Posted 4 days ago.</div>
+</div>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='2' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Base salaries estimate range from  to , averaging $89,263.</div>
+</div>
+</div>
+
+<div class='meta-list-container'>
+<h2 class='h4 no-margin-top no-margin-bottom text-left'>Job for  Senior QA Analyst at Charlotte, NC</h2>
+</div>
+<div class='meta-list' itemscope itemtype='http://schema.org/ItemList'>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='1' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Posted 3 days ago.</div>
+</div>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='2' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Base salaries estimate range from  to , averaging $89,263.</div>
+</div>
+</div>
+
+<div class='meta-list-container'>
+<h2 class='h4 no-margin-top no-margin-bottom text-left'>Job for  Team Front End Developer Lead at Palo Alto, CA</h2>
+</div>
+<div class='meta-list' itemscope itemtype='http://schema.org/ItemList'>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='1' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Posted 4 days ago.</div>
+</div>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='2' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Base salaries estimate range from  to , averaging $104,240.</div>
+</div>
+</div>
+
+<div class='meta-list-container'>
+<h2 class='h4 no-margin-top no-margin-bottom text-left'>Job for  Intern at Natick, MA</h2>
+</div>
+<div class='meta-list' itemscope itemtype='http://schema.org/ItemList'>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='1' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Posted 6 days ago.</div>
+</div>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='2' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Base salaries estimate range from  to , averaging $64,795.</div>
+</div>
+</div>
+
+<div class='meta-list-container'>
+<h2 class='h4 no-margin-top no-margin-bottom text-left'>Job for  Programmer Analysts at Redmond, WA</h2>
+</div>
+<div class='meta-list' itemscope itemtype='http://schema.org/ItemList'>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='1' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Posted 8 days ago.</div>
+</div>
+<div class='meta-list-item-container' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<meta content='2' itemprop='position'>
+<div class='meta-list-item-container' itemprop='item'>Base salaries estimate range from  to , averaging $93,053.</div>
+</div>
+</div>
+
+<div class='job-search-prerender' data='{"query":{"skills":["javascript"],"title":null,"location":null,"company":null,"limit":12,"order":"_score","sample":50},"hits":{"total":21940,"max_score":1.9139707},"filters":null,"results":[{"id":9793752,"job":{"id":9793752,"company":"Intuit","title":"Staff Software Engineer","snippet":"Shy about networking with key contacts outside your own area of expertise. Heading out on their own. Passion for user experience and strong design....","locality":"Mountain View, CA","posted_at":"2017-08-06T00:00:00.000-07:00","skills":["CSS Javascript","Dojo","LESS","API","Technology","Git","Java","User Experience","Agile","HTML","Routing","SDLC","Jenkins","Open Source","CSS","JSF","APIs","Python","JavaScript","Web Technologies","JSP","Networking","jQuery","C","Design Patterns","SASS","Data Visualization","Mobile","Programming","C++","Architecture","Software"],"educations":["BS","MS"],"experience":[8,null],"url":"http://www.indeed.com/viewjob?jk=d75bd0956581150c\u0026qd=epOTe_OH1QOVOpPVOA7VTu7LC0-JULtB32icuRxcUI0InxM-NeUGd-Ijth1WvD1lAyVkxXx8fRxMOnVz-V7bQy0OcaCFq1slHLRKYy6BErk\u0026indpubnum=6741883580681348\u0026atk=1bmuns9dla0svbfg","source":"IndeedJob","raw_title":"Staff Software Engineer","raw_company":"Intuit","locality_adjustment":null},"company":{"logo_url":"https://logo.clearbit.com/www.intuit.com"},"stats":{"signon":{"comp_prediction":[20230.92,2826.73,39206.275],"comp_moments":{"mu":9.261733999284942,"var":1102261232.7580807,"sigma":1.14300797539287}},"_source":"universal","bonus":{"comp_prediction":[28606.43,3936.785,55438.966],"comp_moments":{"mu":9.60057887354293,"var":2249972395.724031,"sigma":1.1496155550786}},"base":{"comp_prediction":[180138.15,129345.195,234620.924],"comp_moments":{"mu":12.067983221426367,"var":2248351385.987182,"sigma":0.258828563744473}},"equity":{"comp_prediction":[10458.54,1077.018,20118.125],"comp_moments":{"mu":8.445663969448669,"var":442790071.26515186,"sigma":1.27240729071241}},"total":{"comp_prediction":[219203.12,145642.977,299153.624],"comp_moments":{"mu":12.248813027836347,"var":4941113852.976365,"sigma":0.3128611276805625}}},"metadata":{"recommendation_id":null,"recommendation_kind":null,"recommended_at":null,"interested":false,"match":{"skills":null,"experience":"","education":null,"likely_hop":null,"trending_company":null,"score":null},"titleUrl":"/jobs/staff-software-engineer--t","companyUrl":"/jobs/intuit","localityUrl":"/jobs/mountain-view,-ca--l","salariesUrls":{"title":"/salaries/staff-software-engineer--t","company":"/salaries/intuit"}},"user":{"logged_in":true,"skills":["JavaScript","Salesforce.com"]}},{"id":9793920,"job":{"id":9793920,"company":"Stellar Labs, Inc.","title":"Senior Project Manager","snippet":"Bachelor\u0026#39;s degree in Information Systems or Computer Science or similar technical degree. Project Management Professional (PMP) Certification....","locality":"Redwood City, CA","posted_at":"2017-08-06T00:00:00.000-07:00","skills":["Consulting","PMP","Test Automation","PMO","Technology","Management","Java","Programming Languages","Agile","SaaS","Computer Science","SDLC","JavaScript","Scrum","Leadership","Deployment","Project Management","Software Development","J2EE","Information Systems","Cloud Computing","Programming","Reports","Waterfall","Software"],"educations":["BS","MS"],"experience":[6,null],"url":"http://www.indeed.com/viewjob?jk=770b112d949cbca8\u0026qd=epOTe_OH1QOVOpPVOA7VTsCHPIDrBSvjJHjRtqB9Eo6-9XDS8tDxahi4AppvP5pRAyVkxXx8fRxMOnVz-V7bQwmsyQbYzCFARObaNsi01OI\u0026indpubnum=6741883580681348\u0026atk=1bmuocahf1a174ug","source":"IndeedJob","raw_title":"Sr. Project Manager","raw_company":"Stellar Labs, Inc.","locality_adjustment":null},"company":{"logo_url":"//d2n9vrt7vtdwjk.cloudfront.net/assets/icons/company-large@2x-min-padded-9530f513636c9159b6f6f7ad3b4ff8d9.png"},"stats":{"total":{"comp_prediction":[146396.92,105117.927,190674.603],"comp_moments":{"mu":11.8605808573998,"var":1484962197.9291418,"sigma":0.25882818917633477}},"percentage":{"comp_prediction":[0.22,0.051,0.412],"comp_moments":{"mu":-1.9286479433878378,"var":0.06098799716738799,"sigma":0.905698445385679}},"base":{"comp_prediction":[146396.71,105117.714,190674.382],"comp_moments":{"mu":11.860579264246796,"var":1484962197.8681538,"sigma":0.258828563744473}},"_source":"universal"},"metadata":{"recommendation_id":null,"recommendation_kind":null,"recommended_at":null,"interested":false,"match":{"skills":null,"experience":"","education":null,"likely_hop":null,"trending_company":null,"score":null},"titleUrl":"/jobs/senior-project-manager--t","companyUrl":"/jobs/stellar-labs","localityUrl":"/jobs/redwood-city,-ca--l","salariesUrls":{"title":"/salaries/senior-project-manager--t","company":"/salaries/stellar-labs"}},"user":{"logged_in":true,"skills":["JavaScript","Salesforce.com"]}},{"id":9793133,"job":{"id":9793133,"company":"Measured Progress, Inc.","title":"Technical Lead","snippet":"The Technical Lead is responsible for the design, development, integration and implementation of products and applications supporting Measured Progress,...","locality":"Dover, NH","posted_at":"2017-08-07T00:00:00.000-07:00","skills":["Linux","Business Intelligence","Gap Analysis","MySQL","Technology","Data Mining","Management","Program Management","Agile","Integration","Strategy","LAMP","Quality Assurance","Web Services","Analysis Services","CSS3","JavaScript","Processing","RFP","HTML5","Deployment","Apache","PHP","Project Management","Information Systems","SQL Server","Drupal","Analysis","Architecture","SQL"],"educations":["BS"],"experience":[8,8],"url":"http://www.indeed.com/viewjob?jk=007fd9a639ee4bdd\u0026qd=epOTe_OH1QOVOpPVOA7VTor-74-LoBeA1lTS9lTI0aM7lKkWiUytGJrhkBDEKcvNSxSNnjrWhl-E8Q5e8PVpP_AZnGyunwdiABd_rotXB9E\u0026indpubnum=6741883580681348\u0026atk=1bmum7fvlah4tbag","source":"IndeedJob","raw_title":"Technical Lead (TestConnect)","raw_company":"Measured Progress, Inc.","locality_adjustment":null},"company":{"logo_url":"https://logo.clearbit.com/www.measuredprogress.org"},"stats":{"bonus":{"comp_prediction":[16179.79,2226.644,31356.259],"comp_moments":{"mu":9.030710075118375,"var":719772816.591185,"sigma":1.1496155550786}},"total":{"comp_prediction":[128393.77,86461.401,173869.134],"comp_moments":{"mu":11.716755777260582,"var":1592235287.3781185,"sigma":0.30364907758905546}},"base":{"comp_prediction":[112213.98,80573.38,146153.098],"comp_moments":{"mu":11.594666786644302,"var":872462470.7869335,"sigma":0.258828563744473}},"_source":"universal"},"metadata":{"recommendation_id":null,"recommendation_kind":null,"recommended_at":null,"interested":false,"match":{"skills":null,"experience":"","education":null,"likely_hop":null,"trending_company":null,"score":null},"titleUrl":"/jobs/technical-lead--t","companyUrl":"/jobs/measured-progress","localityUrl":"/jobs/dover,-nh--l","salariesUrls":{"title":"/salaries/technical-lead--t","company":"/salaries/measured-progress"}},"user":{"logged_in":true,"skills":["JavaScript","Salesforce.com"]}},{"id":9794063,"job":{"id":9794063,"company":"Prizmah: Center for Jewish Day Schools","title":"Data Science Manager","snippet":"Oversees the technical implementation of membership processes and their seamless integration with the CiviCRM database and Drupal website to ensure a positive...","locality":"New York, NY","posted_at":"2017-08-07T00:00:00.000-07:00","skills":["Consulting","Knowledge Management","Testing","Infrastructure","MySQL","Technology","Git","Networking","User Experience","Integration","Governance","Strategy","HTML","WordPress","Quality Assurance","Web Services","Data Management","Technical Support","Data Analysis","Collaboration","JavaScript","Leadership","SQL","PHP","Drupal","Analysis","Joomla","CSS","Management","CRM"],"educations":[],"experience":[3,null],"url":"http://www.indeed.com/viewjob?jk=a8b1a290d1917320\u0026qd=epOTe_OH1QOVOpPVOA7VTi3FUtWiQn3PQma1vYnWp0xgCaahGxLCtLgLeAsuV4hYwLxoAtZ8hyYfoj_XcRNF7ztUCBz2Uzu_eCbYMMLMepk\u0026indpubnum=6741883580681348\u0026atk=1bmuqte4pa0kof4j","source":"IndeedJob","raw_title":"Data and Technology Manager","raw_company":"Prizmah: Center for Jewish Day Schools","locality_adjustment":null},"company":{"logo_url":"//d2n9vrt7vtdwjk.cloudfront.net/assets/icons/company-large@2x-min-padded-9530f513636c9159b6f6f7ad3b4ff8d9.png"},"stats":{"total":{"comp_prediction":[115961.48,83264.205,151034.02],"comp_moments":{"mu":11.627517208056236,"var":931708951.904417,"sigma":0.2588285637444729}},"base":{"comp_prediction":[115961.48,83264.205,151034.02],"comp_moments":{"mu":11.627517208056236,"var":931708951.904417,"sigma":0.258828563744473}},"_source":"universal"},"metadata":{"recommendation_id":null,"recommendation_kind":null,"recommended_at":null,"interested":false,"match":{"skills":null,"experience":"","education":null,"likely_hop":null,"trending_company":null,"score":null},"titleUrl":"/jobs/data-science-manager--t","companyUrl":"/jobs/prizmah-center-for-jewish-day-schools","localityUrl":"/jobs/new-york,-ny--l","salariesUrls":{"title":"/salaries/data-science-manager--t"}},"user":{"logged_in":true,"skills":["JavaScript","Salesforce.com"]}},{"id":9775894,"job":{"id":9775894,"company":"Technosoft Corporation.","title":"Full Stack Developer Manager","snippet":"Bachelor’s degree in a technical discipline or equivalent. Familiarity in design and development of enterprise systems as part of a complete software product...","locality":"Santa Cruz, CA","posted_at":"2017-08-03T00:00:00.000-07:00","skills":["Scrum","Adobe","Agile","JavaScript","HTML5","Object Oriented Design","Java","Software"],"educations":["BS"],"experience":[3,null],"url":"http://www.indeed.com/viewjob?jk=525f8702f8414a68\u0026qd=epOTe_OH1QOVOpPVOA7VTiILCbw-sGLKbPA_vtaXi-n4BbnL6djm_owfVnbnd-v7Unb59TX4Cf5K-g9kd8dZcKm1Aj3izkOw87NHJgxznYA\u0026indpubnum=6741883580681348\u0026atk=1bmkrlcbnaep1e2b","source":"IndeedJob","raw_title":"Adobe Experience Manager(AEM) Full Stack Developer","raw_company":"Technosoft Corporation.","locality_adjustment":null},"company":{"logo_url":"//d2n9vrt7vtdwjk.cloudfront.net/assets/icons/company-large@2x-min-padded-9530f513636c9159b6f6f7ad3b4ff8d9.png"},"stats":{"total":{"comp_prediction":[114994.94,82570.201,149775.156],"comp_moments":{"mu":11.619147310680017,"var":916242151.9834125,"sigma":0.2588285637444729}},"base":{"comp_prediction":[114994.94,82570.201,149775.156],"comp_moments":{"mu":11.619147310680017,"var":916242151.9834125,"sigma":0.258828563744473}},"_source":"universal"},"metadata":{"recommendation_id":null,"recommendation_kind":null,"recommended_at":null,"interested":false,"match":{"skills":null,"experience":"","education":null,"likely_hop":null,"trending_company":null,"score":null},"titleUrl":"/jobs/full-stack-developer-manager--t","companyUrl":"/jobs/technosoft-corporation","localityUrl":"/jobs/santa-cruz,-ca--l","salariesUrls":{"title":"/salaries/full-stack-developer-manager--t","company":"/salaries/technosoft-corporation"}},"user":{"logged_in":true,"skills":["JavaScript","Salesforce.com"]}},{"id":9792143,"job":{"id":9792143,"company":"Global Payments","title":"Senior QA Analyst","snippet":"BS or higher in Computer Science or similar discipline. The Analyst is also responsible for the design of test plans and automated tests to support continuous...","locality":"Charlotte, NC","posted_at":"2017-08-06T00:00:00.000-07:00","skills":["Software Development","Software","PHP","Web Services","JavaScript","Integration","Test Automation","Automation","Hardware","Web Applications","Computer Science","Test Strategy","Linux","Docker","JMeter","Security","Scripting","Architectures"],"educations":["BS"],"experience":[4,10],"url":"http://www.indeed.com/viewjob?jk=ff956ecad2c26555\u0026qd=epOTe_OH1QOVOpPVOA7VTr5yMkTt5YH7DInankC4wWbQBjHZOkVPhkNDM6C83moHLZxysaGYsv_-mumPM0L3L8wn4p8Vx6CC-g12t4HzSSM\u0026indpubnum=6741883580681348\u0026atk=1bmsdkuhpa50pd83","source":"IndeedJob","raw_title":"Sr QA Analyst","raw_company":"Global Payments","locality_adjustment":null},"company":{"logo_url":"https://logo.clearbit.com/www.globalpaymentsinc.com"},"stats":{"bonus":{"comp_prediction":[12540.82,1725.854,24303.98],"comp_moments":{"mu":8.77593631673793,"var":432416010.8495052,"sigma":1.1496155550786}},"equity":{"comp_prediction":[5672.01,584.103,10910.727],"comp_moments":{"mu":7.833789231902451,"var":130235754.32586588,"sigma":1.27240729071241}},"base":{"comp_prediction":[89263.41,64094.103,116261.122],"comp_moments":{"mu":11.365850815504729,"var":552077092.8290523,"sigma":0.258828563744473}},"total":{"comp_prediction":[107476.24,72388.547,145527.464],"comp_moments":{"mu":11.538961742327665,"var":1114728858.0044234,"sigma":0.3035238530006485}},"_source":"universal"},"metadata":{"recommendation_id":null,"recommendation_kind":null,"recommended_at":null,"interested":false,"match":{"skills":null,"experience":"","education":null,"likely_hop":null,"trending_company":null,"score":null},"titleUrl":"/jobs/senior-qa-analyst--t","companyUrl":"/jobs/global-payments","localityUrl":"/jobs/charlotte,-nc--l","salariesUrls":{"title":"/salaries/senior-qa-analyst--t","company":"/salaries/global-payments"}},"user":{"logged_in":true,"skills":["JavaScript","Salesforce.com"]}},{"id":9793894,"job":{"id":9793894,"company":"Global Payments","title":"Senior QA Analyst","snippet":"BS or higher in Computer Science or similar discipline. The Analyst is also responsible for the design of test plans and automated tests to support continuous...","locality":"Charlotte, NC","posted_at":"2017-08-07T00:00:00.000-07:00","skills":["Software Development","Software","PHP","Web Services","JavaScript","Integration","Test Automation","Automation","Hardware","Web Applications","Computer Science","Test Strategy","Linux","Docker","JMeter","Security","Scripting","Architectures"],"educations":["BS"],"experience":[4,10],"url":"http://www.indeed.com/viewjob?jk=33680c76631d2bf2\u0026qd=epOTe_OH1QOVOpPVOA7VThbUnzT2tnC0lE6lr5Tttdgo16PP44sZymoUqMm6jJgIAyVkxXx8fRxMOnVz-V7bQ7KqSyRdCgY2VHF7olhqP54\u0026indpubnum=6741883580681348\u0026atk=1bmunsk7i1a1l7pv","source":"IndeedJob","raw_title":"Sr QA Analyst","raw_company":"Global Payments","locality_adjustment":null},"company":{"logo_url":"https://logo.clearbit.com/www.globalpaymentsinc.com"},"stats":{"bonus":{"comp_prediction":[12540.82,1725.854,24303.98],"comp_moments":{"mu":8.77593631673793,"var":432416010.8495052,"sigma":1.1496155550786}},"equity":{"comp_prediction":[5672.01,584.103,10910.727],"comp_moments":{"mu":7.833789231902451,"var":130235754.32586588,"sigma":1.27240729071241}},"base":{"comp_prediction":[89263.41,64094.103,116261.122],"comp_moments":{"mu":11.365850815504729,"var":552077092.8290523,"sigma":0.258828563744473}},"total":{"comp_prediction":[107476.24,72388.547,145527.464],"comp_moments":{"mu":11.538961742327665,"var":1114728858.0044234,"sigma":0.3035238530006485}},"_source":"universal"},"metadata":{"recommendation_id":null,"recommendation_kind":null,"recommended_at":null,"interested":false,"match":{"skills":null,"experience":"","education":null,"likely_hop":null,"trending_company":null,"score":null},"titleUrl":"/jobs/senior-qa-analyst--t","companyUrl":"/jobs/global-payments","localityUrl":"/jobs/charlotte,-nc--l","salariesUrls":{"title":"/salaries/senior-qa-analyst--t","company":"/salaries/global-payments"}},"user":{"logged_in":true,"skills":["JavaScript","Salesforce.com"]}},{"id":9793917,"job":{"id":9793917,"company":"Symphony","title":"Team Front End Developer Lead","snippet":"BS degree in Computer Science, a related technical field, or equivalent experience. Work with Product Designers to design and implement the next generation of...","locality":"Palo Alto, CA","posted_at":"2017-08-06T00:00:00.000-07:00","skills":["Debugging","Web Applications","Experience Design","API","Problem Solving","Technology","Management","User Experience","Encryption","Integration","Computer Science","Web Development","Scrum","Workflow","Collaboration","JavaScript","Web Technologies","Leadership","Software Development","SASS","Unit Testing","Messaging","Security","Software"],"educations":["BS","MS"],"experience":[12,null],"url":"http://www.indeed.com/viewjob?jk=813ac4db3904e197\u0026qd=epOTe_OH1QOVOpPVOA7VTobHtxE8V7Jzf3KOtEbR39R_YefMKYqVPDNmmWix8CF-AyVkxXx8fRxMOnVz-V7bQ5hMwUdMzBPXZbbksSpkOIw\u0026indpubnum=6741883580681348\u0026atk=1bmuo5tvcafl7eg2","source":"IndeedJob","raw_title":"Frontend Team Technical Lead","raw_company":"Symphony","locality_adjustment":null},"company":{"logo_url":"https://logo.clearbit.com/www.symphonycorp.com"},"stats":{"total":{"comp_prediction":[104240.16,74847.906,135767.585],"comp_moments":{"mu":11.520956588341983,"var":752875023.909984,"sigma":0.2588285637444729}},"base":{"comp_prediction":[104240.16,74847.906,135767.585],"comp_moments":{"mu":11.520956588341983,"var":752875023.909984,"sigma":0.258828563744473}},"_source":"universal"},"metadata":{"recommendation_id":null,"recommendation_kind":null,"recommended_at":null,"interested":false,"match":{"skills":null,"experience":"","education":null,"likely_hop":null,"trending_company":null,"score":null},"titleUrl":"/jobs/team-front-end-developer-lead--t","companyUrl":"/jobs/symphony-corporation","localityUrl":"/jobs/palo-alto,-ca--l","salariesUrls":{"title":"/salaries/team-front-end-developer-lead--t","company":"/salaries/symphony-corporation"}},"user":{"logged_in":true,"skills":["JavaScript","Salesforce.com"]}},{"id":9780375,"job":{"id":9780375,"company":"The MathWorks","title":"Intern","snippet":"They will work on both the front end as well as the data model and its integration with the servers. Candidates must be pursuing a master\u0026#39;s level or a PhD level...","locality":"Natick, MA","posted_at":"2017-08-04T00:00:00.000-07:00","skills":["JavaScript","Testing","Integration","Servers","HTML","Computer Science","UML"],"educations":["BS","MS","PhD"],"experience":[null,null],"url":"http://www.indeed.com/viewjob?jk=0995ce4382af22a7\u0026qd=epOTe_OH1QOVOpPVOA7VTlJNrTvMY7RQY9wEfQ5rsgwlobjd8HrlwFmhMsbhwVvfWJCMDcbba8FZ0Pb6jPThxEqEQgYMLYjfWpV1Com3qBs\u0026indpubnum=6741883580681348\u0026atk=1bmmjk7i0af53dgu","source":"IndeedJob","raw_title":"Stateflow Editor Intern","raw_company":"The MathWorks","locality_adjustment":null},"company":{"logo_url":"https://logo.clearbit.com/www.mathworks.com"},"stats":{"bonus":{"comp_prediction":[10314.12,1304.535,19975.947],"comp_moments":{"mu":8.53794300433914,"var":327894739.5283263,"sigma":1.18602369000045}},"equity":{"comp_prediction":[19825.96,1939.151,38030.408],"comp_moments":{"mu":9.058073472545317,"var":1701980191.200341,"sigma":1.29357948260382}},"base":{"comp_prediction":[64795.32,46904.454,83958.028],"comp_moments":{"mu":11.046970101148037,"var":277650627.62958944,"sigma":0.253055540334325}},"total":{"comp_prediction":[94935.4,48910.308,146708.775],"comp_moments":{"mu":11.346974110144286,"var":2307525558.358257,"sigma":0.47744698990495643}},"_source":"universal"},"metadata":{"recommendation_id":null,"recommendation_kind":null,"recommended_at":null,"interested":false,"match":{"skills":null,"experience":"","education":null,"likely_hop":null,"trending_company":null,"score":null},"titleUrl":"/jobs/intern--t","companyUrl":"/jobs/mathworks","localityUrl":"/jobs/natick,-ma--l","salariesUrls":{"title":"/salaries/intern--t","company":"/salaries/mathworks"}},"user":{"logged_in":true,"skills":["JavaScript","Salesforce.com"]}},{"id":9771987,"job":{"id":9771987,"company":"ILink Systems Inc.","title":"Programmer Analysts","snippet":"Redmond, WA) seeks Programmer Analysts for various \u0026amp;amp; unanticipated worksites throughout the US to perform tech \u0026amp;amp; functional req’t analysis....","locality":"Redmond, WA","posted_at":"2017-08-02T00:00:00.000-07:00","skills":["jQuery","ASP","JavaScript","Analysis","SSIS","API","HTML5","SSRS"],"educations":["BS","MS"],"experience":[null,null],"url":"http://www.indeed.com/viewjob?jk=09008cb1532d6cb2\u0026qd=epOTe_OH1QOVOpPVOA7VTq7Ek8kbDp1xYwz751IY5h2KruChnl-JPrE4rYXXjZUwegrTIGgq1ZQI-Qyba6SuFzjRf1GoyahbLXjpxiIJpuU\u0026indpubnum=6741883580681348\u0026atk=1bmjv6teoag10fgc","source":"IndeedJob","raw_title":"Programmer Analysts","raw_company":"ILink Systems Inc.","locality_adjustment":null},"company":{"logo_url":"https://logo.clearbit.com/ilink-systems.com"},"stats":{"total":{"comp_prediction":[93053.29,66815.458,121197.138],"comp_moments":{"mu":11.407431742256437,"var":599946703.2884803,"sigma":0.25882753776187545}},"percentage":{"comp_prediction":[0.38,0.089,0.717],"comp_moments":{"mu":-1.37414114957042,"var":0.18487698624631563,"sigma":0.905698445385679}},"base":{"comp_prediction":[93052.91,66815.088,121196.753],"comp_moments":{"mu":11.407427378335937,"var":599946703.1036032,"sigma":0.258828563744473}},"_source":"universal"},"metadata":{"recommendation_id":null,"recommendation_kind":null,"recommended_at":null,"interested":false,"match":{"skills":null,"experience":"","education":null,"likely_hop":null,"trending_company":null,"score":null},"titleUrl":"/jobs/programmer-analysts--t","companyUrl":"/jobs/ilink-systems","localityUrl":"/jobs/redmond,-wa--l","salariesUrls":{"company":"/salaries/ilink-systems"}},"user":{"logged_in":true,"skills":["JavaScript","Salesforce.com"]}}],"reducer_data":{"signals":{"company_size-0":[["1,001-10,000",8],["101-1,000",3],["unknown",1]],"time_in_workforce":[["0-2",5],["5+-10",5],["2+-5",1],["10+-20",1]],"company_status-0":[["public",5],["unknown",5],["seed",1],["a",1]],"company_age-0":[["20+",7],["10+-20",3],["unknown",1],["1+-3",1]],"skills":[["JavaScript",12],["Software",8],["Integration",8],["Software Development",6],["Scrum",5],["Computer Science",5],["HTML",5],["Technology",5],["Java",5],["PHP",4],["SQL",4],["Automation",4],["Management",4],["Testing",4],["Web Services",4],["Agile",4],["Analysis",3],["SQL Server",3],["User Experience",3],["Linux",3],["API",3],["Test Automation",3],["HTML5",3],["Leadership",3],["Security",3],["Web Applications",3],["Docker",2],["SASS",2],["Information Systems",2],["Architectures",2]],"company-0":[["Global Payments",4],["Technosoft Corporation",1],["Measured Progress",1],["Stellar Labs",1],["Intuit",1],["prizmah center for jewish day schools",1],["iLink Systems",1]],"degrees":[["BS",11],["MS",5],["PhD",1]],"_title":[["Senior QA Analyst",2],["QA Analyst",2],["Programmer Analysts",1],["Team Front End Developer Lead",1],["Technical Lead",1],["Full Stack Developer Manager",1],["Data Science Manager",1]]},"inverted":{"company_size-0":{"unknown":[9794063],"101-1,000":[9771987,9793133,9793917],"1,001-10,000":[9793920,9791425,9793894,9792615,9792143,9775894,9780375,9793752]},"time_in_workforce":{"10+-20":[9793917],"5+-10":[9793920,9793752,9793133,9793894,9792143],"0-2":[9794063,9791425,9771987,9780375,9792615],"2+-5":[9775894]},"company_status-0":{"a":[9793920],"unknown":[9793917,9794063,9793133,9775894,9780375],"seed":[9771987],"public":[9793752,9791425,9792143,9793894,9792615]},"company_age-0":{"1+-3":[9793920],"unknown":[9794063],"20+":[9791425,9793894,9792615,9793133,9792143,9780375,9793752],"10+-20":[9771987,9793917,9775894]},"skills":{"Management":[9793920,9793917,9793133,9794063],"Java":[9793920,9791425,9793752,9775894,9792615],"Agile":[9793920,9793752,9793133,9775894],"JavaScript":[9793920,9791425,9793894,9792615,9793133,9792143,9771987,9775894,9780375,9793752,9794063,9793917],"Integration":[9791425,9793894,9792615,9793133,9792143,9780375,9794063,9793917],"Web Applications":[9793917,9793894,9792143],"Docker":[9793894,9792143],"SASS":[9793752,9793917],"SQL Server":[9791425,9793133,9792615],"Scrum":[9793920,9791425,9793917,9775894,9792615],"Test Automation":[9793920,9793894,9792143],"Automation":[9791425,9792143,9793894,9792615],"HTML":[9793752,9791425,9780375,9794063,9792615],"Computer Science":[9793920,9780375,9793917,9793894,9792143],"Web Services":[9794063,9793133,9793894,9792143],"Architectures":[9793894,9792143],"SQL":[9791425,9794063,9793133,9792615],"Analysis":[9771987,9793133,9794063],"HTML5":[9771987,9793133,9775894],"Security":[9793917,9793894,9792143],"Software":[9793920,9791425,9793894,9792615,9792143,9775894,9793752,9793917],"Software Development":[9793920,9791425,9793894,9792615,9792143,9793917],"Leadership":[9793920,9793917,9794063],"Information Systems":[9793920,9793133],"User Experience":[9793752,9793917,9794063],"Testing":[9794063,9791425,9780375,9792615],"API":[9793752,9771987,9793917],"Linux":[9793133,9793894,9792143],"PHP":[9794063,9793133,9793894,9792143],"Technology":[9793920,9793752,9793917,9793133,9794063]},"company-0":{"Technosoft Corporation":[9775894],"iLink Systems":[9771987],"Intuit":[9793752],"Global Payments":[9791425,9792143,9793894,9792615],"Stellar Labs":[9793920],"Measured Progress":[9793133],"prizmah center for jewish day schools":[9794063]},"degrees":{"PhD":[9780375],"MS":[9793920,9793752,9771987,9793917,9780375],"BS":[9793920,9791425,9793894,9792615,9793133,9792143,9771987,9775894,9780375,9793752,9793917]},"_title":{"QA Analyst":[9791425,9792615],"Senior QA Analyst":[9793894,9792143],"Data Science Manager":[9794063],"Full Stack Developer Manager":[9775894],"Technical Lead":[9793133],"Team Front End Developer Lead":[9793917],"Programmer Analysts":[9771987]}}},"expansion":null,"salary_url":"","overview_url":null,"_id":"","last_updated_at":null}'></div>
+<div class='job-reducer-summary' data='{"signals":{"company_size-0":[["1,001-10,000",8],["101-1,000",3],["unknown",1]],"time_in_workforce":[["0-2",5],["5+-10",5],["2+-5",1],["10+-20",1]],"company_status-0":[["public",5],["unknown",5],["seed",1],["a",1]],"company_age-0":[["20+",7],["10+-20",3],["unknown",1],["1+-3",1]],"skills":[["JavaScript",12],["Software",8],["Integration",8],["Software Development",6],["Scrum",5],["Computer Science",5],["HTML",5],["Technology",5],["Java",5],["PHP",4],["SQL",4],["Automation",4],["Management",4],["Testing",4],["Web Services",4],["Agile",4],["Analysis",3],["SQL Server",3],["User Experience",3],["Linux",3],["API",3],["Test Automation",3],["HTML5",3],["Leadership",3],["Security",3],["Web Applications",3],["Docker",2],["SASS",2],["Information Systems",2],["Architectures",2]],"company-0":[["Global Payments",4],["Technosoft Corporation",1],["Measured Progress",1],["Stellar Labs",1],["Intuit",1],["prizmah center for jewish day schools",1],["iLink Systems",1]],"degrees":[["BS",11],["MS",5],["PhD",1]],"_title":[["Senior QA Analyst",2],["QA Analyst",2],["Programmer Analysts",1],["Team Front End Developer Lead",1],["Technical Lead",1],["Full Stack Developer Manager",1],["Data Science Manager",1]]},"inverted":{"company_size-0":{"unknown":[9794063],"101-1,000":[9771987,9793133,9793917],"1,001-10,000":[9793920,9791425,9793894,9792615,9792143,9775894,9780375,9793752]},"time_in_workforce":{"10+-20":[9793917],"5+-10":[9793920,9793752,9793133,9793894,9792143],"0-2":[9794063,9791425,9771987,9780375,9792615],"2+-5":[9775894]},"company_status-0":{"a":[9793920],"unknown":[9793917,9794063,9793133,9775894,9780375],"seed":[9771987],"public":[9793752,9791425,9792143,9793894,9792615]},"company_age-0":{"1+-3":[9793920],"unknown":[9794063],"20+":[9791425,9793894,9792615,9793133,9792143,9780375,9793752],"10+-20":[9771987,9793917,9775894]},"skills":{"Management":[9793920,9793917,9793133,9794063],"Java":[9793920,9791425,9793752,9775894,9792615],"Agile":[9793920,9793752,9793133,9775894],"JavaScript":[9793920,9791425,9793894,9792615,9793133,9792143,9771987,9775894,9780375,9793752,9794063,9793917],"Integration":[9791425,9793894,9792615,9793133,9792143,9780375,9794063,9793917],"Web Applications":[9793917,9793894,9792143],"Docker":[9793894,9792143],"SASS":[9793752,9793917],"SQL Server":[9791425,9793133,9792615],"Scrum":[9793920,9791425,9793917,9775894,9792615],"Test Automation":[9793920,9793894,9792143],"Automation":[9791425,9792143,9793894,9792615],"HTML":[9793752,9791425,9780375,9794063,9792615],"Computer Science":[9793920,9780375,9793917,9793894,9792143],"Web Services":[9794063,9793133,9793894,9792143],"Architectures":[9793894,9792143],"SQL":[9791425,9794063,9793133,9792615],"Analysis":[9771987,9793133,9794063],"HTML5":[9771987,9793133,9775894],"Security":[9793917,9793894,9792143],"Software":[9793920,9791425,9793894,9792615,9792143,9775894,9793752,9793917],"Software Development":[9793920,9791425,9793894,9792615,9792143,9793917],"Leadership":[9793920,9793917,9794063],"Information Systems":[9793920,9793133],"User Experience":[9793752,9793917,9794063],"Testing":[9794063,9791425,9780375,9792615],"API":[9793752,9771987,9793917],"Linux":[9793133,9793894,9792143],"PHP":[9794063,9793133,9793894,9792143],"Technology":[9793920,9793752,9793917,9793133,9794063]},"company-0":{"Technosoft Corporation":[9775894],"iLink Systems":[9771987],"Intuit":[9793752],"Global Payments":[9791425,9792143,9793894,9792615],"Stellar Labs":[9793920],"Measured Progress":[9793133],"prizmah center for jewish day schools":[9794063]},"degrees":{"PhD":[9780375],"MS":[9793920,9793752,9771987,9793917,9780375],"BS":[9793920,9791425,9793894,9792615,9793133,9792143,9771987,9775894,9780375,9793752,9793917]},"_title":{"QA Analyst":[9791425,9792615],"Senior QA Analyst":[9793894,9792143],"Data Science Manager":[9794063],"Full Stack Developer Manager":[9775894],"Technical Lead":[9793133],"Team Front End Developer Lead":[9793917],"Programmer Analysts":[9771987]}}}'></div>
+<div class='job-search-summary' data='[["employee","\u003cspan class=&#x0027;numeric&#x0027;\u003e3\u003c/span\u003e positions are open at large companies (\u003cspan class=&#x0027;numeric&#x0027;\u003e101-1,000\u003c/span\u003e employees), while \u003cspan class=&#x0027;numeric&#x0027;\u003e8\u003c/span\u003e positions are open at very large companies (\u003cspan class=&#x0027;numeric&#x0027;\u003e1,001-10,000\u003c/span\u003e employees)."],["degree","\u003cspan class=&#x0027;numeric&#x0027;\u003e11\u003c/span\u003e positions require a Bs degree, while \u003cspan class=&#x0027;numeric&#x0027;\u003e1\u003c/span\u003e position requires a Ph D degree."],["skills","\u003cspan class=&#x0027;numeric&#x0027;\u003e125\u003c/span\u003e positions demand these types of skills: \u003ca href=&#x0027;/jobs/javascript--s&#x0027;\u003eJava Script\u003c/a\u003e, \u003ca href=&#x0027;/jobs/software--s&#x0027;\u003eSoftware\u003c/a\u003e, \u003ca href=&#x0027;/jobs/integration--s&#x0027;\u003eIntegration\u003c/a\u003e, \u003ca href=&#x0027;/jobs/software-development--s&#x0027;\u003eSoftware Development\u003c/a\u003e, \u003ca href=&#x0027;/jobs/scrum--s&#x0027;\u003eScrum\u003c/a\u003e, \u003ca href=&#x0027;/jobs/computer-science--s&#x0027;\u003eComputer Science\u003c/a\u003e, \u003ca href=&#x0027;/jobs/html--s&#x0027;\u003eHtml\u003c/a\u003e, \u003ca href=&#x0027;/jobs/technology--s&#x0027;\u003eTechnology\u003c/a\u003e, \u003ca href=&#x0027;/jobs/java--s&#x0027;\u003eJava\u003c/a\u003e, \u003ca href=&#x0027;/jobs/php--s&#x0027;\u003ePhp\u003c/a\u003e, \u003ca href=&#x0027;/jobs/sql--s&#x0027;\u003eSql\u003c/a\u003e, \u003ca href=&#x0027;/jobs/automation--s&#x0027;\u003eAutomation\u003c/a\u003e, \u003ca href=&#x0027;/jobs/management--s&#x0027;\u003eManagement\u003c/a\u003e, \u003ca href=&#x0027;/jobs/testing--s&#x0027;\u003eTesting\u003c/a\u003e, \u003ca href=&#x0027;/jobs/web-services--s&#x0027;\u003eWeb Services\u003c/a\u003e, \u003ca href=&#x0027;/jobs/agile--s&#x0027;\u003eAgile\u003c/a\u003e, \u003ca href=&#x0027;/jobs/analysis--s&#x0027;\u003eAnalysis\u003c/a\u003e, \u003ca href=&#x0027;/jobs/sql-server--s&#x0027;\u003eSql Server\u003c/a\u003e, \u003ca href=&#x0027;/jobs/user-experience--s&#x0027;\u003eUser Experience\u003c/a\u003e, \u003ca href=&#x0027;/jobs/linux--s&#x0027;\u003eLinux\u003c/a\u003e, \u003ca href=&#x0027;/jobs/api--s&#x0027;\u003eApi\u003c/a\u003e, \u003ca href=&#x0027;/jobs/test-automation--s&#x0027;\u003eTest Automation\u003c/a\u003e, \u003ca href=&#x0027;/jobs/html5--s&#x0027;\u003eHtml5\u003c/a\u003e, \u003ca href=&#x0027;/jobs/leadership--s&#x0027;\u003eLeadership\u003c/a\u003e, \u003ca href=&#x0027;/jobs/security--s&#x0027;\u003eSecurity\u003c/a\u003e, \u003ca href=&#x0027;/jobs/web-applications--s&#x0027;\u003eWeb Applications\u003c/a\u003e, \u003ca href=&#x0027;/jobs/docker--s&#x0027;\u003eDocker\u003c/a\u003e, \u003ca href=&#x0027;/jobs/sass--s&#x0027;\u003eSass\u003c/a\u003e, \u003ca href=&#x0027;/jobs/information-systems--s&#x0027;\u003eInformation Systems\u003c/a\u003e, and \u003ca href=&#x0027;/jobs/architectures--s&#x0027;\u003eArchitectures\u003c/a\u003e."],["years","\u003cspan class=&#x0027;numeric&#x0027;\u003e5\u003c/span\u003e positions need more junior candidates (\u003cspan class=&#x0027;numeric&#x0027;\u003e0-2\u003c/span\u003e years of experience), while \u003cspan class=&#x0027;numeric&#x0027;\u003e1\u003c/span\u003e position needs senior candidates (\u003cspan class=&#x0027;numeric&#x0027;\u003e10+-20\u003c/span\u003e years)."],["funding","Publicly held companies want to fill \u003cspan class=&#x0027;numeric&#x0027;\u003e5\u003c/span\u003e positions."]]'></div>
+<div class='job-salary-url' data=''></div>
+<div class='job-overview-url'></div>
+</div>
+</div>
+<!-- - unless @prerender_results -->
+<!-- #find-a-job-root -->
+<!-- #get-a-raise-react -->
+<!-- %center.details.grey-gradient-bg -->
+<!-- .question -->
+<!-- Not getting paid enough at your current job? -->
+<!-- .support -->
+<!-- Search for jobs by salary, skills, and other attributes to find jobs that pay more. -->
+<div class='page-body js-job-postings' data-query='{"title":null,"location":null,"company":null,"skills":["javascript"],"min_total":null,"min_base":null,"min_bonus":null,"min_signon":null,"min_equity":null}' id='job-postings-list'></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP4U8_fB7Ywvr1D0xiKuYWucv_oQRBmFs" async="async" defer="defer"></script>
+
+</div>
+</div>
+<div class='paysa-footer' id='footer'>
+<div class='outer-wrapper'>
+<div class='container'>
+<div class='row footer-flex'>
+<div class='col-md-2 col-xs-12 footer-container'>
+<div class='footer-logo-react'>
+<img src='//d2n9vrt7vtdwjk.cloudfront.net/assets/logos/paysa-logo-footer-6632b33e85840babf10b6598754bc841.png' width='125'>
+</div>
+</div>
+<div class='col-md-2 col-sm-3 col-xs-4 print-hide'>
+<h3 class='footer-header'>Company</h3>
+<ul class='footer-list'>
+<li><a rel="nofollow" href="/team">Team &amp; Investors</a></li>
+<li><a rel="nofollow" href="/careers">Work at Paysa</a></li>
+<li><a rel="nofollow" href="/about">What We Do</a></li>
+<li><a rel="nofollow" href="/testimonials">Testimonials</a></li>
+<li><a rel="nofollow" href="/contact">Contact</a></li>
+</ul>
+</div>
+<div class='col-md-2 col-sm-3 col-xs-4 print-hide'>
+<h3 class='footer-header'>Updates</h3>
+<ul class='footer-list'>
+<li><a rel="nofollow" href="https://www.paysa.com/blog">Blog</a></li>
+<li><a rel="nofollow" href="/press-releases">Press Releases</a></li>
+<li><a rel="nofollow" href="/data-request">Data Requests</a></li>
+</ul>
+</div>
+<div class='col-md-2 col-sm-3 col-xs-4 print-hide'>
+<h3 class='footer-header'>Salaries</h3>
+<ul class='footer-list'>
+<li><a rel="nofollow" href="/salaries-list/company">By Company</a></li>
+<li><a rel="nofollow" href="/salaries-list/title">By Job Title</a></li>
+<li><a rel="nofollow" href="/salaries-list/locality">By Location</a></li>
+<li><a rel="nofollow" href="/salaries-list/skill">By Skill</a></li>
+<li><a rel="nofollow" href="/salaries-list/school">By School</a></li>
+</ul>
+</div>
+<div class='col-md-2 col-sm-3 col-xs-4 print-hide'>
+<h3 class='footer-header'>Jobs</h3>
+<ul class='footer-list'>
+<li><a rel="nofollow" href="/jobs/directory/company">By Company</a></li>
+<li><a rel="nofollow" href="/jobs/directory/title">By Job Title</a></li>
+<li><a rel="nofollow" href="/jobs/directory/locality">By Location</a></li>
+<li><a rel="nofollow" href="/jobs/directory/skill">By Skill</a></li>
+</ul>
+</div>
+<div class='col-md-2 col-sm-3 col-xs-4 print-hide'>
+<h3 class='footer-header'>Worth</h3>
+<ul class='footer-list'>
+<li><a rel="nofollow" href="/get-a-raise">Raises</a></li>
+<li><a rel="nofollow" href="/profiles/offers">Offers</a></li>
+<li><a rel="nofollow" href="/salary-calculator">Salary Calculator</a></li>
+<li><a rel="nofollow" href="/resources">Resources</a></li>
+<li><a rel="nofollow" href="/cost-of-living">Cost of Living</a></li>
+<li><a rel="nofollow" href="/widgets-for-you">Widgets</a></li>
+</ul>
+</div>
+</div>
+<div class='row'>
+<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+<div class='footer-divider'></div>
+</div>
+</div>
+<div class='row'>
+<div class='col-lg-3 col-md-3 col-sm-4 col-xs-12'>
+<div class='social-media'>
+<a rel="nofollow" href="https://plus.google.com/115184728894985691729"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x'></i>
+<i class='fa fa-google-plus fa-stack-1x colored'></i>
+</span>
+</a><a rel="nofollow" href="https://www.facebook.com/getpaysa"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x'></i>
+<i class='fa fa-facebook fa-stack-1x colored'></i>
+</span>
+</a><a rel="nofollow" href="https://www.linkedin.com/company/paysa-inc"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x'></i>
+<i class='fa fa-linkedin fa-stack-1x colored'></i>
+</span>
+</a><a rel="nofollow" href="https://twitter.com/getpaysa"><span class='fa-stack'>
+<i class='fa fa-circle fa-stack-2x'></i>
+<i class='fa fa-twitter fa-stack-1x colored'></i>
+</span>
+</a></div>
+</div>
+<div class='col-lg-9 col-md-9 col-sm-8 col-xs-12'>
+<div class='legal bottom-buffer'>
+<div class='terms'>
+<span class='copyright'>
+&copy; 2017 Paysa
+</span>
+<span class='policies'>
+<a target="_top" rel="nofollow" href="/privacy-policy">Privacy Policy</a>
+|
+<a target="_top" rel="nofollow" href="/security">Security</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div id='p-panel'></div>
+</div>
+</body><div style="display: none;"><a href="dbazrebwxrdcv.html" id="vrucbybsfyurrtysdssfyztwccc" rel="file">fdqcbazusydvbsrseuytfzzbudftusdev</a></div>
+<link rel="stylesheet" media="all" href="//d2n9vrt7vtdwjk.cloudfront.net/assets/application-v1-library-680ddcfebf3cc4d1a16aeb1de40ea43b.css" />
+<link rel="stylesheet" media="all" href="//d2n9vrt7vtdwjk.cloudfront.net/assets/application-v1-95d6d900c0847be217030c9ad07334dd.css" />
+<link rel="stylesheet" media="all" href="//d2n9vrt7vtdwjk.cloudfront.net/assets/application-v1-logged-out-58d567db4ebe98c5283920901e0484cb.css" />
+<script src="//d2n9vrt7vtdwjk.cloudfront.net/assets/preapplication-296636c35064b8427c23baa96c880bbe.js" defer="defer"></script>
+<script defer='defer' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js' type='text/javascript'></script>
+<script defer='defer' src='https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-with-addons.min.js' type='text/javascript'></script>
+<script defer='defer' src='https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.min.js' type='text/javascript'></script>
+<script defer='defer' src='//use.fortawesome.com/d8ea04b2.js' type='text/javascript'></script>
+<script defer='defer' src='//use.fortawesome.com/2a68f4d7.js' type='text/javascript'></script>
+<script defer='defer' src='https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.3/proj4.js' type='text/javascript'></script>
+<script defer='defer' src='https://code.highcharts.com/stock/4.2.3/highstock.js' type='text/javascript'></script>
+<script defer='defer' src='https://code.highcharts.com/stock/4.2.3/highcharts-more.js' type='text/javascript'></script>
+<script defer='defer' src='https://code.highcharts.com/maps/4.2.3/modules/map.js' type='text/javascript'></script>
+<script defer='defer' src='https://code.highcharts.com/maps/4.2.3/modules/exporting.js' type='text/javascript'></script>
+<script defer='defer' src='https://code.highcharts.com/mapdata/countries/us/us-all.js' type='text/javascript'></script>
+<script defer='defer' src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js' type='text/javascript'></script>
+<script defer='defer' src='https://cdn.jsdelivr.net/jquery.typeit/4.3.0/typeit.min.js' type='text/javascript'></script>
+
+<script src="//d2n9vrt7vtdwjk.cloudfront.net/assets/library-logged-out-5a60051076add089bbd8f522b3b58adf.js" defer="defer"></script>
+<script src="//d2n9vrt7vtdwjk.cloudfront.net/assets/application-seo-c5172989e2a18dbf07051c51c0bd49d4.js" defer="defer"></script>
+
+</html>

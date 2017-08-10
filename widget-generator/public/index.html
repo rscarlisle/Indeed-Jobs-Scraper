@@ -4,13 +4,23 @@
   <meta charset="utf-8">
   <title>Widget Generator</title>
   <link rel="stylesheet" type="text/css" href="./static/app.css">
-   <script defer src="./static/app.js"></script> 
-  
+  <script defer src="./static/app.js"></script> 
+  <style>
+    .widget {
+        border: 2px solid #222eee;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.8em;
+        max-width: 300px;
+        padding: 9px;
+        float: left;
+        margin: 9px;
+    }
+  </style>
    <!-- test code below -->
-   <script defer src="../src/OnlineJobBoardPageScraper.js"></script>
+   <!-- <script defer src="../src/scrapers/OnlineJobBoardPageScraper.js"></script> -->
 </head>
 <body>
-  <div id="root">
+  <div id="root" class="widget">
   </div>
 </body>
 </html>
