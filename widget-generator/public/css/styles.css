@@ -1,0 +1,49 @@
+body {
+    margin: auto;
+    margin-top: 20px;
+    border: 3px solid #222;
+    width: 500px;
+    height: 300px;
+}
+
+.container {
+  margin-left: 20px;
+}
+
+input[type=email], input[type=password] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: gray;
+    color: black;
+    padding: 7px 0px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 1550px) {
+  body {
+      width: 500px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  body {
+    width: 300px;
+  }
+  button {
+    width: 70%;
+  }
+}
