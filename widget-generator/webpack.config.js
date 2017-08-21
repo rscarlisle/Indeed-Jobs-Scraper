@@ -1,5 +1,6 @@
 const libpath = require('path');
 const rimraf = require('rimraf');
+const getConfig = require('hjs-webpack');
 
 function path(path) {
   return libpath.join(__dirname, path);
@@ -7,13 +8,14 @@ function path(path) {
 
 rimraf.sync(path('public/static/app.js'));
 
-module.exports = {
+module.exports = getConfig({
   target: 'web',
-  entry: path('src/index.js'),
-  output: {
+  in: path('src/index.js'),
+  out: {
     path: path('public/static'),
     pathinfo: true,
-    filename: 'app.js'
+    filename: 'app.js',
+    isDev: process.env.NODE_ENV !== 'production'
   },
   module: {
     rules: [
@@ -25,4 +27,4 @@ module.exports = {
       }
     ]
   }
-};
+});
