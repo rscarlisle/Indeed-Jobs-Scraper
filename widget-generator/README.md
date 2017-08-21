@@ -1,3 +1,3 @@
-# Web Page Scraper and Widget Generator
+# Indeed Web Page Scraper and Widget Generator
 
-![index](widget-generator.png)
+![index](indeed-jobs-scraper.png)
