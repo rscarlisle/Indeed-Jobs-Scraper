@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Widget Generator</title>
+  <link rel="stylesheet" type="text/css" href="./static/app.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/materialize.min.css">
+   <link rel="stylesheet" type="text/css" href="./css/styles.css"> 
+  
+  <script defer src="./static/app.js"></script> 
+  <style>
+    .widget {
+        border: 2px solid #222eee;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.8em;
+        max-width: 600px;
+        padding: 9px;
+        /* float: left; */
+        /* margin: 40px 9px 9px 9px; */
+        margin-top: 9px;
+    }
+  </style>
+   <!-- test code below -->
+   <!-- <script defer src="../src/scrapers/OnlineJobBoardPageScraper.js"></script> -->
+</head>
+<body>
+
+  <div class="container">
+    <form name="widgetForm">
+      Company Name:
+      <input id="company-name" type="text" placeholder="company">
+      Job Title:
+      <input id="job-title" type="text" placeholder="job">
+      City/Region:
+      <input id="city-region" type="text" placeholder="city">          
+      Submit:
+      <button id="myBtn" type="submit" value="Submit">Submit</button>
+      <div id="root" class="widget">
+      </div> 
+    </form>
+  </div>  
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css" integrity="sha256-mkKV3FUh67dtli09bVbaYyM1526XgR92cz1uKarE1jo=" crossorigin="anonymous" />
+</body>
+</html>
